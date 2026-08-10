@@ -1,0 +1,4 @@
+interface:
+  display_name: "PostgreSQL JPA Query Diagnostics"
+  short_description: "Diagnose PostgreSQL/JPA parameter errors"
+  default_prompt: "Use $postgres-jpa-query-diagnostics to locate the failing query layer and propose only integration-tested fixes."

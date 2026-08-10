@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:18.4
+    environment:
+      POSTGRES_DB: query_lab
+      POSTGRES_USER: query_lab
+      POSTGRES_PASSWORD: query_lab
+    ports:
+      - "55432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U query_lab -d query_lab"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+

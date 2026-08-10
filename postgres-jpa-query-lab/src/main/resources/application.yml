@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: postgres-jpa-query-lab
+  datasource:
+    url: jdbc:postgresql://localhost:55432/query_lab
+    username: query_lab
+    password: query_lab
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.springframework.jdbc.core: TRACE
+
